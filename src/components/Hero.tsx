@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Download, Github, Linkedin, Mail, Code2, AlertCircle, FileText } from 'lucide-react'
-import avatarImg from '../assets/avatar.png'
+import avatarImg from '../assets/profile.jpg'
 
 export const Hero: React.FC = () => {
   const [showResumeModal, setShowResumeModal] = useState(false)
@@ -39,19 +39,23 @@ export const Hero: React.FC = () => {
 
       <div className="max-w-4xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
         
-        {/* AVATAR */}
+        {/* HERO PROFILE IMAGE */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative mb-5"
+          className="relative mb-6"
         >
-          <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full p-[3px] bg-gradient-to-tr from-[#FF7547] via-[#9B72F2] to-[#FF7547] shadow-[0_0_25px_rgba(255,117,71,0.25)]">
-            <div className="w-full h-full rounded-full overflow-hidden bg-[#151518] flex items-center justify-center">
+          {/* Subtle Ambient Outer Neon Glow */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#FF7547] via-[#EC4899] to-[#9B72F2] blur-xl opacity-40 scale-105 pointer-events-none" />
+
+          {/* Glowing Circular Frame (Orange, Pink & Purple Gradient Border) */}
+          <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full p-[3px] bg-gradient-to-tr from-[#FF7547] via-[#EC4899] to-[#9B72F2] shadow-[0_0_30px_rgba(255,117,71,0.35),0_0_55px_rgba(155,114,242,0.25)]">
+            <div className="w-full h-full rounded-full overflow-hidden bg-[#0D0D0F] flex items-center justify-center">
               <img
                 src={avatarImg}
-                alt="Abdul Rahuman"
-                className="w-full h-full object-cover"
+                alt="Abdul Rahuman - Full Stack Developer & AI Enthusiast"
+                className="w-full h-full object-cover scale-[1.11] object-center"
                 loading="eager"
               />
             </div>
