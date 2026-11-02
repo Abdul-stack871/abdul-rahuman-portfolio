@@ -172,12 +172,23 @@ export const Skills: React.FC = () => {
     ? technologies 
     : technologies.filter(t => t.category === filter)
 
+  // Determine responsive grid cols based on count
+  const count = filteredTech.length
+  const getGridCols = () => {
+    if (count <= 2) return 'grid-cols-2 sm:grid-cols-2'
+    if (count <= 3) return 'grid-cols-2 sm:grid-cols-3'
+    if (count <= 4) return 'grid-cols-2 sm:grid-cols-4'
+    if (count <= 5) return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-5'
+    if (count <= 6) return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-6'
+    return 'grid-cols-2 sm:grid-cols-4 md:grid-cols-7'
+  }
+
   return (
-    <section id="about" className="py-12 border-t border-[#232328]">
+    <section id="skills" className="py-12 border-t border-[#232328]">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* SECTION HEADER MATCHING SCREENSHOT */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <span className="text-xs font-semibold text-[#FF7547] tracking-wider">01 —</span>
             <span className="text-xs font-semibold tracking-wider text-neutral-400 uppercase">
@@ -189,8 +200,37 @@ export const Skills: React.FC = () => {
           </span>
         </div>
 
-        {/* COMPACT TECHNOLOGY CARDS GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 sm:gap-4">
+        {/* CATEGORY FILTER PILLS — moved above grid for UX */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+          {[
+            { id: 'all', label: 'All Technologies' },
+            { id: 'languages', label: 'Languages' },
+            { id: 'frontend', label: 'Frontend' },
+            { id: 'backend', label: 'Backend' },
+            { id: 'tools', label: 'Database & Tools' },
+          ].map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setFilter(cat.id as any)}
+              className={`px-3 py-1 rounded-full text-[11px] font-medium transition-all ${
+                filter === cat.id
+                  ? 'bg-[#FF7547] text-white shadow-[0_0_12px_rgba(255,117,71,0.3)]'
+                  : 'bg-[#151518] text-[#9CA3AF] hover:text-white border border-[#232328] hover:border-[#FF7547]/30'
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        {/* COMPACT TECHNOLOGY CARDS GRID — centers when few items */}
+        <motion.div
+          key={filter}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25 }}
+          className={`grid ${getGridCols()} gap-3 sm:gap-4 ${count < 7 ? 'max-w-3xl mx-auto' : ''}`}
+        >
           {filteredTech.map((tech) => (
             <motion.div
               key={tech.name}
@@ -206,30 +246,7 @@ export const Skills: React.FC = () => {
               </span>
             </motion.div>
           ))}
-        </div>
-
-        {/* CATEGORY FILTER PILLS */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
-          {[
-            { id: 'all', label: 'All Technologies' },
-            { id: 'languages', label: 'Languages' },
-            { id: 'frontend', label: 'Frontend' },
-            { id: 'backend', label: 'Backend' },
-            { id: 'tools', label: 'Database & Tools' },
-          ].map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setFilter(cat.id as any)}
-              className={`px-3 py-1 rounded-full text-[11px] font-medium transition-all ${
-                filter === cat.id
-                  ? 'bg-[#FF7547] text-white'
-                  : 'bg-[#151518] text-[#9CA3AF] hover:text-white border border-[#232328]'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

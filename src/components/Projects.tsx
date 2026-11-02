@@ -131,8 +131,8 @@ export const Projects: React.FC = () => {
 
         <div className="mb-8" />
 
-        {/* 2-COLUMN PROJECT CARDS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* 3-COLUMN PROJECT CARDS GRID ON DESKTOP, 1-COL MOBILE */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, idx) => (
             <motion.div
               key={project.id}
@@ -140,9 +140,7 @@ export const Projects: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className={`portfolio-card overflow-hidden flex flex-col justify-between group ${
-                idx === 2 ? 'md:col-span-2 md:max-w-xl md:mx-auto w-full' : ''
-              }`}
+              className="portfolio-card overflow-hidden flex flex-col justify-between group"
             >
               <div>
                 {/* CARD TOP PREVIEW & BADGE */}

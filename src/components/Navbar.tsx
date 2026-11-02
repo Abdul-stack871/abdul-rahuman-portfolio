@@ -27,13 +27,19 @@ export const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScrollActive = () => {
       const scrollY = window.scrollY
-      const sections = NAV_ITEMS.map((item) => document.getElementById(item.id)).filter(Boolean) as HTMLElement[]
+      // Include all section ids for accurate scroll-spy (skills is separate from about)
+      const allSectionIds = ['home', 'about', 'skills', 'projects', 'experience', 'certificates', 'education', 'exploring', 'contact']
+      const sections = allSectionIds.map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[]
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i]
         const top = section.offsetTop - 120
         if (scrollY >= top) {
-          setActiveSection(section.id)
+          // Map skills -> about for nav highlight, education/exploring stay hidden
+          const sectionId = section.id
+          const navId = sectionId === 'skills' ? 'about' : sectionId
+          const validNavId = NAV_ITEMS.some(n => n.id === navId) ? navId : activeSection
+          setActiveSection(validNavId)
           break
         }
       }
@@ -41,7 +47,7 @@ export const Navbar: React.FC = () => {
 
     window.addEventListener('scroll', handleScrollActive, { passive: true })
     return () => window.removeEventListener('scroll', handleScrollActive)
-  }, [])
+  }, [activeSection])
 
   const handleNavClick = (id: string) => {
     setMobileMenuOpen(false)

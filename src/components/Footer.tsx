@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-xs">
               <li>
                 <button
-                  onClick={() => scrollToSection('about')}
+                  onClick={() => scrollToSection('skills')}
                   className="text-[#9CA3AF] hover:text-white transition-colors"
                 >
                   Tech Stack

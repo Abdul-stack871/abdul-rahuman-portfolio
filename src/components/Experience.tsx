@@ -31,7 +31,7 @@ export const Experience: React.FC = () => {
       id: 'vihansa-hackathon',
       role: 'Hackathon — VIHANSA 2K26',
       organization: '24-Hour National Level Hackathon',
-      date: 'Jun 2024',
+      date: '2026',
       badge: 'National Level | 24 Hours',
       description: 'Participated in an NLP-based Sentiment Analysis problem and worked on automated text sentiment classification.',
       category: 'Hackathon',
