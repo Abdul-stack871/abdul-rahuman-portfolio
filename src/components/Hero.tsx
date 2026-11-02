@@ -47,10 +47,10 @@ export const Hero: React.FC = () => {
           className="relative mb-6"
         >
           {/* Subtle Ambient Outer Neon Glow */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#FF7547] via-[#EC4899] to-[#9B72F2] blur-xl opacity-40 scale-105 pointer-events-none" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#FF7547] via-[#EC4899] to-[#9B72F2] blur-2xl opacity-50 scale-110 pointer-events-none" />
 
           {/* Glowing Circular Frame (Orange, Pink & Purple Gradient Border) */}
-          <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full p-[3px] bg-gradient-to-tr from-[#FF7547] via-[#EC4899] to-[#9B72F2] shadow-[0_0_30px_rgba(255,117,71,0.35),0_0_55px_rgba(155,114,242,0.25)]">
+          <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full p-[3.5px] bg-gradient-to-tr from-[#FF7547] via-[#EC4899] to-[#9B72F2] shadow-[0_0_35px_rgba(255,117,71,0.4),0_0_65px_rgba(155,114,242,0.3)]">
             <div className="w-full h-full rounded-full overflow-hidden bg-[#0D0D0F] flex items-center justify-center">
               <img
                 src={avatarImg}
