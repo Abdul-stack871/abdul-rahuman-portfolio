@@ -1,23 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Download, Github, Linkedin, Mail, Code2, AlertCircle, FileText } from 'lucide-react'
+import { ArrowUpRight, Download, Github, Linkedin, Mail, Code2, FileText } from 'lucide-react'
 import avatarImg from '../assets/profile.jpg'
 
 export const Hero: React.FC = () => {
-  const [showResumeModal, setShowResumeModal] = useState(false)
-  const [resumeAvailable] = useState(true) // Actual resume is available at /resume.pdf
-
-  const handleResumeClick = () => {
-    if (resumeAvailable) {
-      const link = document.createElement('a')
-      link.href = '/resume.pdf'
-      link.download = 'Abdul_Rahuman_Resume.pdf'
-      link.click()
-    } else {
-      setShowResumeModal(true)
-    }
-  }
-
   const scrollToProjects = () => {
     const el = document.getElementById('projects')
     if (el) {
@@ -120,13 +106,16 @@ export const Hero: React.FC = () => {
             <ArrowUpRight className="w-4 h-4" />
           </button>
 
-          <button
-            onClick={handleResumeClick}
-            className="flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium text-white bg-[#151518] border border-[#2B2B32] hover:border-[#FF7547]/50 hover:bg-[#1A1A20] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+          <a
+            href="/resume.pdf"
+            download="Abdul_Rahuman_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium text-white bg-[#151518] border border-[#2B2B32] hover:border-[#FF7547]/50 hover:bg-[#1A1A20] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             <Download className="w-4 h-4 text-[#9CA3AF]" />
             <span>Download Resume</span>
-          </button>
+          </a>
         </motion.div>
 
         {/* SOCIAL LINKS ROW */}
@@ -174,45 +163,19 @@ export const Hero: React.FC = () => {
             <Mail className="w-4 h-4" />
           </a>
 
-          <button
-            onClick={handleResumeClick}
-            aria-label="Resume Information"
-            title="Resume Information"
+          <a
+            href="/resume.pdf"
+            download="Abdul_Rahuman_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download Resume"
+            title="Download Resume (PDF)"
             className="w-9 h-9 rounded-full flex items-center justify-center text-[#9CA3AF] hover:text-white bg-[#151518] border border-[#232328] hover:border-[#FF7547]/40 hover:bg-[#1A1A20] transition-all"
           >
             <FileText className="w-4 h-4" />
-          </button>
+          </a>
         </motion.div>
       </div>
-
-      {/* RESUME NOTICE MODAL */}
-      {showResumeModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="portfolio-card max-w-sm w-full p-6 text-center border-[#2B2B32]">
-            <div className="w-12 h-12 rounded-full bg-[#FF7547]/10 text-[#FF7547] flex items-center justify-center mx-auto mb-4">
-              <AlertCircle className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Resume Notice</h3>
-            <p className="text-xs text-[#9CA3AF] leading-relaxed mb-5">
-              Resume file will be updated shortly. You can connect with Abdul directly on LinkedIn or via email for an up-to-date CV and project portfolio.
-            </p>
-            <div className="flex gap-2">
-              <a
-                href="mailto:abdulrahumanrock15@gmail.com?subject=Resume%20Inquiry%20-%20Abdul%20Rahuman"
-                className="flex-1 py-2 px-3 rounded-lg text-xs font-semibold text-white bg-[#FF7547] hover:bg-[#ff855c] transition-colors"
-              >
-                Email Abdul
-              </a>
-              <button
-                onClick={() => setShowResumeModal(false)}
-                className="py-2 px-4 rounded-lg text-xs font-medium text-[#9CA3AF] hover:text-white bg-[#232328] transition-colors"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   )
 }
