@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import React from 'react'
 
 interface TechItem {
   name: string
@@ -8,10 +7,8 @@ interface TechItem {
 }
 
 export const Skills: React.FC = () => {
-  const [filter, setFilter] = useState<'all' | 'languages' | 'frontend' | 'backend' | 'tools'>('all')
-
-  const technologies: TechItem[] = [
-    // Programming Languages
+  // Row 1 Technologies (Languages & Frontend - 7 items)
+  const row1Tech: TechItem[] = [
     {
       name: 'Java',
       category: 'languages',
@@ -29,32 +26,6 @@ export const Skills: React.FC = () => {
         <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none">
           <rect width="32" height="32" rx="4" fill="#F7DF1E"/>
           <path d="M19.7 24.3c1.2 2 2.7 3.2 5.2 3.2 2.2 0 3.6-1.1 3.6-2.6 0-1.8-1.5-2.5-3.9-3.5l-1.3-.6c-3.8-1.6-6.3-3.6-6.3-7.9 0-3.9 3-6.9 7.7-6.9 3.4 0 5.8 1.2 7.5 4.2l-3.3 2.1c-.9-1.6-1.9-2.2-4.1-2.2-1.9 0-3.1 1.2-3.1 2.5 0 1.6 1.1 2.3 3.6 3.4l1.3.6c4.5 1.9 6.8 3.8 6.8 8.2 0 4.7-3.7 7.3-8.6 7.3-4.8 0-7.9-2.3-9.5-5.7l4.3-2.6zm-10.7.4c.8 1.4 1.5 2.5 3.2 2.5 1.6 0 2.7-.6 2.7-3.1v-14.3h4.4v14.4c0 4.8-2.8 7.1-6.9 7.1-3.7 0-5.9-1.9-7-4.3l3.6-2.3z" fill="#000000"/>
-        </svg>
-      )
-    },
-
-    // Frontend Development
-    {
-      name: 'HTML',
-      category: 'frontend',
-      iconSvg: (
-        <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none">
-          <path d="M5.3 28.5L2.7 0h26.6l-2.6 28.5L15.9 32 5.3 28.5z" fill="#E44D26"/>
-          <path d="M16 29.5l8.6-2.4 2.2-24.3H16v26.7z" fill="#F16529"/>
-          <path d="M16 12.8h-4.6l-.3-3.6H16V5.6H7.9l.9 10.8H16v-3.6zm0 8.8l-.1.03-3.7-1-.2-2.7H8.3l.5 5.3 7.2 2v-3.63z" fill="#EBEBEB"/>
-          <path d="M16 12.8h4.6l-.4 5.2-4.2 1.1v3.7l7.2-2 .9-11.6H16v3.6z" fill="#FFFFFF"/>
-        </svg>
-      )
-    },
-    {
-      name: 'CSS',
-      category: 'frontend',
-      iconSvg: (
-        <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none">
-          <path d="M5.3 28.5L2.7 0h26.6l-2.6 28.5L15.9 32 5.3 28.5z" fill="#1572B6"/>
-          <path d="M16 29.5l8.6-2.4 2.2-24.3H16v26.7z" fill="#33A9DC"/>
-          <path d="M16 12.8h-4.6l-.3-3.6H16V5.6H7.9l.9 10.8H16v-3.6zm0 8.8l-.1.03-3.7-1-.2-2.7H8.3l.5 5.3 7.2 2v-3.63z" fill="#EBEBEB"/>
-          <path d="M24.1 9.2H16v3.6h4.3l-.4 4.4-3.9 1.1v3.7l7.2-2 .9-10.8z" fill="#FFFFFF"/>
         </svg>
       )
     },
@@ -82,6 +53,30 @@ export const Skills: React.FC = () => {
       )
     },
     {
+      name: 'HTML',
+      category: 'frontend',
+      iconSvg: (
+        <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none">
+          <path d="M5.3 28.5L2.7 0h26.6l-2.6 28.5L15.9 32 5.3 28.5z" fill="#E44D26"/>
+          <path d="M16 29.5l8.6-2.4 2.2-24.3H16v26.7z" fill="#F16529"/>
+          <path d="M16 12.8h-4.6l-.3-3.6H16V5.6H7.9l.9 10.8H16v-3.6zm0 8.8l-.1.03-3.7-1-.2-2.7H8.3l.5 5.3 7.2 2v-3.63z" fill="#EBEBEB"/>
+          <path d="M16 12.8h4.6l-.4 5.2-4.2 1.1v3.7l7.2-2 .9-11.6H16v3.6z" fill="#FFFFFF"/>
+        </svg>
+      )
+    },
+    {
+      name: 'CSS',
+      category: 'frontend',
+      iconSvg: (
+        <svg className="w-6 h-6" viewBox="0 0 32 32" fill="none">
+          <path d="M5.3 28.5L2.7 0h26.6l-2.6 28.5L15.9 32 5.3 28.5z" fill="#1572B6"/>
+          <path d="M16 29.5l8.6-2.4 2.2-24.3H16v26.7z" fill="#33A9DC"/>
+          <path d="M16 12.8h-4.6l-.3-3.6H16V5.6H7.9l.9 10.8H16v-3.6zm0 8.8l-.1.03-3.7-1-.2-2.7H8.3l.5 5.3 7.2 2v-3.63z" fill="#EBEBEB"/>
+          <path d="M24.1 9.2H16v3.6h4.3l-.4 4.4-3.9 1.1v3.7l7.2-2 .9-10.8z" fill="#FFFFFF"/>
+        </svg>
+      )
+    },
+    {
       name: 'Bootstrap',
       category: 'frontend',
       iconSvg: (
@@ -90,9 +85,11 @@ export const Skills: React.FC = () => {
           <path d="M12.5 8h4.5c2.3 0 4 .5 5 1.5 1 .9 1.4 2.2 1.4 3.7 0 1.2-.3 2.2-1 3-.7.8-1.6 1.3-2.8 1.5v.1c1.5.3 2.6.9 3.4 1.8.8.9 1.2 2.1 1.2 3.6 0 1.8-.6 3.2-1.7 4.3-1.1 1.1-2.8 1.6-5 1.6H12.5V8zm3.6 3.1v4.7h1.4c1.1 0 1.9-.2 2.5-.7.5-.5.8-1.1.8-2 0-.8-.3-1.4-.8-1.8-.6-.4-1.4-.6-2.5-.6h-1.4zm0 7.7v5.2h1.8c1.2 0 2.1-.3 2.7-.8.6-.6.9-1.3.9-2.2 0-.9-.3-1.6-.9-2.1-.6-.5-1.5-.7-2.7-.7h-1.8z" fill="#FFFFFF"/>
         </svg>
       )
-    },
+    }
+  ]
 
-    // Backend Development
+  // Row 2 Technologies (Backend, Database & Tools - 7 items)
+  const row2Tech: TechItem[] = [
     {
       name: 'Node.js',
       category: 'backend',
@@ -124,8 +121,6 @@ export const Skills: React.FC = () => {
         </svg>
       )
     },
-
-    // Database & Tools
     {
       name: 'MongoDB',
       category: 'tools',
@@ -168,27 +163,29 @@ export const Skills: React.FC = () => {
     }
   ]
 
-  const filteredTech = filter === 'all' 
-    ? technologies 
-    : technologies.filter(t => t.category === filter)
+  // Duplicate arrays 4 times to ensure seamless infinite loop without blank spaces
+  const duplicatedRow1 = [...row1Tech, ...row1Tech, ...row1Tech, ...row1Tech]
+  const duplicatedRow2 = [...row2Tech, ...row2Tech, ...row2Tech, ...row2Tech]
 
-  // Determine responsive grid cols based on count
-  const count = filteredTech.length
-  const getGridCols = () => {
-    if (count <= 2) return 'grid-cols-2 sm:grid-cols-2'
-    if (count <= 3) return 'grid-cols-2 sm:grid-cols-3'
-    if (count <= 4) return 'grid-cols-2 sm:grid-cols-4'
-    if (count <= 5) return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-5'
-    if (count <= 6) return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-6'
-    return 'grid-cols-2 sm:grid-cols-4 md:grid-cols-7'
-  }
+  const TechCard: React.FC<{ tech: TechItem; index: number }> = ({ tech, index }) => (
+    <div
+      key={`${tech.name}-${index}`}
+      className="portfolio-card w-36 sm:w-44 h-24 sm:h-28 p-3 sm:p-4 flex flex-col items-center justify-center text-center shrink-0 group cursor-default transition-all duration-300 hover:border-[#FF7547]/50 hover:-translate-y-1 hover:shadow-[0_8px_20px_-4px_rgba(255,117,71,0.25)] select-none"
+    >
+      <div className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110">
+        {tech.iconSvg}
+      </div>
+      <span className="text-xs font-medium text-neutral-300 group-hover:text-white transition-colors">
+        {tech.name}
+      </span>
+    </div>
+  )
 
   return (
-    <section id="skills" className="py-12 border-t border-[#232328]">
-      <div className="max-w-6xl mx-auto px-6">
-        
-        {/* SECTION HEADER MATCHING SCREENSHOT */}
-        <div className="flex items-center justify-between mb-6">
+    <section id="skills" className="py-12 border-t border-[#232328] overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 mb-8">
+        {/* SECTION HEADER MATCHING APPROVED SCREENSHOT */}
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-xs font-semibold text-[#FF7547] tracking-wider">01 —</span>
             <span className="text-xs font-semibold tracking-wider text-neutral-400 uppercase">
@@ -199,55 +196,33 @@ export const Skills: React.FC = () => {
             Technologies I Work With
           </span>
         </div>
+      </div>
 
-        {/* CATEGORY FILTER PILLS — moved above grid for UX */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
-          {[
-            { id: 'all', label: 'All Technologies' },
-            { id: 'languages', label: 'Languages' },
-            { id: 'frontend', label: 'Frontend' },
-            { id: 'backend', label: 'Backend' },
-            { id: 'tools', label: 'Database & Tools' },
-          ].map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setFilter(cat.id as any)}
-              className={`px-3 py-1 rounded-full text-[11px] font-medium transition-all ${
-                filter === cat.id
-                  ? 'bg-[#FF7547] text-white shadow-[0_0_12px_rgba(255,117,71,0.3)]'
-                  : 'bg-[#151518] text-[#9CA3AF] hover:text-white border border-[#232328] hover:border-[#FF7547]/30'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+      {/* MARQUEE WRAPPER WITH FADE EDGES */}
+      <div className="relative w-full overflow-hidden">
+        {/* Left & Right Smooth Gradient Fade Masks */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#0D0D0F] via-[#0D0D0F]/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#0D0D0F] via-[#0D0D0F]/80 to-transparent z-10" />
+
+        <div className="space-y-4 py-2">
+          {/* ROW 1: LEFT-TO-RIGHT MARQUEE (Languages & Frontend - 28s speed) */}
+          <div className="overflow-hidden">
+            <div className="animate-marquee-row1 gap-3 sm:gap-4 pl-3 sm:pl-4">
+              {duplicatedRow1.map((tech, idx) => (
+                <TechCard key={`r1-${idx}`} tech={tech} index={idx} />
+              ))}
+            </div>
+          </div>
+
+          {/* ROW 2: LEFT-TO-RIGHT MARQUEE (Backend, Database & Tools - 34s speed) */}
+          <div className="overflow-hidden">
+            <div className="animate-marquee-row2 gap-3 sm:gap-4 pl-3 sm:pl-4">
+              {duplicatedRow2.map((tech, idx) => (
+                <TechCard key={`r2-${idx}`} tech={tech} index={idx} />
+              ))}
+            </div>
+          </div>
         </div>
-
-        {/* COMPACT TECHNOLOGY CARDS GRID — centers when few items */}
-        <motion.div
-          key={filter}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.25 }}
-          className={`grid ${getGridCols()} gap-3 sm:gap-4 ${count < 7 ? 'max-w-3xl mx-auto' : ''}`}
-        >
-          {filteredTech.map((tech) => (
-            <motion.div
-              key={tech.name}
-              whileHover={{ y: -4, borderColor: 'rgba(255, 117, 71, 0.4)' }}
-              transition={{ duration: 0.2 }}
-              className="portfolio-card p-4 flex flex-col items-center justify-center text-center group cursor-default"
-            >
-              <div className="w-9 h-9 flex items-center justify-center mb-2.5 transition-transform group-hover:scale-110">
-                {tech.iconSvg}
-              </div>
-              <span className="text-xs font-medium text-neutral-300 group-hover:text-white transition-colors">
-                {tech.name}
-              </span>
-            </motion.div>
-          ))}
-        </motion.div>
-
       </div>
     </section>
   )

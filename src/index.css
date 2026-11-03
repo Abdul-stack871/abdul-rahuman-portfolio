@@ -76,3 +76,38 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Infinite Left-to-Right Marquee */
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-row1 {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 28s linear infinite;
+}
+
+.animate-marquee-row2 {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 34s linear infinite;
+}
+
+.animate-marquee-row1:hover,
+.animate-marquee-row2:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-row1,
+  .animate-marquee-row2 {
+    animation: none !important;
+    transform: none !important;
+  }
+}
