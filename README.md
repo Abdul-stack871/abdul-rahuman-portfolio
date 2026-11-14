@@ -1,170 +1,278 @@
-# Abdul Rahuman — Personal Developer Portfolio
+ <div align="center">
 
-> **Production-Ready Personal Developer Portfolio** built with **React 19**, **TypeScript**, **Vite 8**, and **Tailwind CSS**. Designed in a minimal dark theme with matte black aesthetics, warm orange highlights, and subtle purple accents.
+# ABDUL RAHUMAN
 
----
+### Full Stack Developer | AI Enthusiast | Problem Solver
 
-## ✦ Table of Contents
+Building digital experiences. Exploring intelligent technologies. Turning ideas into practical solutions.
 
-- [Overview](#-overview)
-- [Tech Stack](#-tech-stack)
-- [Key Sections](#-key-sections)
-- [Project Setup](#-project-setup)
-- [Environment Configuration](#-environment-configuration)
-- [Production Deployment](#-production-deployment)
-  - [Deploy to Vercel (Recommended)](#1-deploy-to-vercel-recommended)
-  - [Deploy to Netlify](#2-deploy-to-netlify)
-- [Maintenance & Updates](#-maintenance--updates)
-  - [Updating Your Resume](#updating-your-resume)
-  - [Adding / Editing Projects](#adding--editing-projects)
-  - [Connecting a Custom Domain](#connecting-a-custom-domain)
-- [License & Author](#-license--author)
+[**Live Portfolio ↗**](https://abdul-rahuman-portfolio-seven.vercel.app/) · [GitHub](https://github.com/Abdul-stack871) · [LinkedIn](https://www.linkedin.com/in/abdul-rahuman281/)
+
+![Portfolio](https://img.shields.io/badge/Portfolio-Live-FF7547?style=for-the-badge&labelColor=111111)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react&labelColor=111111)
+![TypeScript](https://img.shields.io/badge/TypeScript-Development-3178C6?style=for-the-badge&logo=typescript&labelColor=111111)
+![Vercel](https://img.shields.io/badge/Deployment-Vercel-FFFFFF?style=for-the-badge&logo=vercel&labelColor=111111)
+
+</div>
 
 ---
 
-## ✦ Overview
+## 01. About the Portfolio
 
-This portfolio website showcases the software engineering projects, hackathon achievements, certifications, and technical journey of **Abdul Rahuman** (Final Year B.Tech in Artificial Intelligence & Data Science at Dr. NGP Institute of Technology).
+Welcome to my personal developer portfolio.
 
-- **Visual Direction:** Minimal Dark Developer Portfolio
-- **Color Palette:** Matte Black (`#0D0D0F`), Dark Charcoal Cards (`#151518`), Warm Orange Accent (`#FF7547`), Subtle Purple Accent (`#9B72F2`)
-- **Typography:** Plus Jakarta Sans & Inter
-- **Performance:** Optimized build bundle (~120KB gzip total), lazy asset loading, zero layout shifts
+This website represents my journey as a developer, my interest in building meaningful software, and my exploration of Artificial Intelligence and modern web technologies.
 
----
+It brings together my technical skills, selected projects, professional experience, academic background, certifications, and ways to connect with me — all in one place.
 
-## ✦ Tech Stack
+**The objective:** Present my work through a focused, interactive, and accessible digital experience.
 
-- **Frontend Core:** React 19, TypeScript, Vite 8
-- **Styling:** Tailwind CSS v4, Custom CSS theme variables
-- **Motion & UI:** Framer Motion, Lucide React
-- **Code Quality:** Oxlint, Strict TypeScript type-checking
-- **Deployment:** Vercel / Netlify with automated CI/CD and SPA fallback routing
+## 02. Live Preview
 
----
+<details>
+<summary><strong>View portfolio website</strong></summary>
 
-## ✦ Key Sections
+Visit the deployed website:
 
-1. **Header & Navigation:** Sticky glassmorphism header, brand monogram `AR`, active section scroll-spy indicator, mobile drawer menu, and *Let's Talk* CTA.
-2. **Hero:** High-resolution 3D developer avatar with gradient halo ring, academic status badge, orange highlighted typography, direct resume download, and social link row.
-3. **Tech Stack (01):** Responsive grid of approved technologies (Java, JavaScript, HTML, CSS, React, Tailwind CSS, Bootstrap, Node.js, Express.js, Spring Boot, MongoDB, Git, GitHub, VS Code) with authentic brand logos and category filters.
-4. **Featured Projects (02):** 3 real-world projects:
-   - **Cognivis:** Multimodal document intelligence & RAG knowledge assistant.
-   - **StayMate AI:** Student accommodation and roommate matching platform (React + Spring Boot + MySQL).
-   - **NarratoVision:** Generative AI storytelling engine with synchronized visual synthesis.
-   - *Interactive deep-dive modal for each project with architecture, contributions, and GitHub links.*
-5. **Experience & Journey (03):** Vertical timeline covering internship at Aalan Tech Soft (ATS), VIHANSA 2K26 hackathon, TECHNOVA '26, ICRIT '26 paper presentation, and workshops.
-6. **Certifications & Achievements (04):** Compact cards displaying NPTEL Elite scores (HCI 86%, HCI Implementation 61%, Privacy & Security 57%) and ISEA Cyber Security completion, plus hackathon & research highlights.
-7. **Education (05):** Verified cards for Dr. NGP Institute of Technology and Sengunthar Higher Secondary School with institutional emblems.
-8. **Currently Exploring (06):** Five focus areas: Full Stack Development, GenAI & LLMs, RAG & Agents, Modern Web Technologies, and Blockchain.
-9. **Contact & Direct Messaging (07):** Quick social pills + validated contact form with honeypot spam protection, rate limiting, and email dispatch support (Web3Forms / custom endpoint / transparent mailto fallback).
-10. **Footer (08/09):** Option 2 Modern Orange & Purple footer with sitemaps, copyright, and smooth Back to Top button.
+https://abdul-rahuman-portfolio-seven.vercel.app/
 
----
+</details>
 
-## ✦ Project Setup
+<!-- Add an actual website screenshot here:
+     docs/images/portfolio-preview.png -->
+
+## 03. Design & Experience
+
+The portfolio follows a dark developer-focused visual direction.
+
+| Design Element | Direction |
+|---|---|
+| Visual Theme | Minimal dark interface |
+| Primary Accent | Warm Orange |
+| Secondary Accent | Purple |
+| Background | Matte Black / Charcoal |
+| Typography | Clean, modern sans-serif |
+| Experience | Responsive, interactive presentation |
+
+The design prioritizes readable content, clear navigation, structured project presentation, and subtle motion.
+
+## 04. Portfolio Sections
+
+The website is organized into nine main sections.
+
+| Section | What it presents |
+|---|---|
+| Hero | Introduction and professional positioning |
+| Technology Stack | Development technologies and tools |
+| Featured Projects | Selected software and AI projects |
+| Experience & Journey | Internship and technical journey |
+| Certifications & Achievements | Learning milestones and achievements |
+| Education | Academic background |
+| Currently Exploring | Current learning interests |
+| Contact | Ways to reach me |
+| Footer | Navigation and social profiles |
+
+## 05. Technology Stack
+
+My development toolkit includes:
+
+**Programming Languages**
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+
+**Frontend Development**
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+
+**Backend & Database**
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+
+**Development Tools**
+
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+
+*These badges describe my broader development toolkit; they do not imply that every technology is used to build this portfolio website.*
+
+## 06. Featured Projects
+
+A selection of projects reflecting my interests in full-stack development and AI.
+
+### 01 — Cognivis
+
+**RAG-Based AI Knowledge Assistant**
+
+An AI-powered knowledge assistant focused on retrieving relevant information from documents and generating context-aware responses.
+
+Focus areas:
+- Retrieval-Augmented Generation
+- Document intelligence
+- Context-aware AI responses
+
+### 02 — StayMate AI
+
+**Student Accommodation & Roommate Discovery Platform**
+
+A platform designed to help students discover accommodation options and connect with potential roommates.
+
+Technology:
+- React
+- Spring Boot
+- MongoDB
+
+[View GitHub Repository ↗](https://github.com/Abdul-stack871/Stay-Mate)
+
+### 03 — NarratoVision
+
+**Generative AI Storytelling & Image Generation**
+
+An AI application combining text-based storytelling with AI-powered image generation.
+
+Technology:
+- Python
+- Streamlit
+- OpenRouter API
+- Stable Diffusion
+
+[View GitHub Repository ↗](https://github.com/Abdul-stack871/NarratoVission-AI)
+
+## 07. Experience & Journey
+
+**Web Development Intern — Aalan Tech Soft (ATS)**
+
+June 09, 2025 – June 25, 2025
+
+A 17-day internship providing practical exposure to web development and development-related tasks.
+
+**Technical Activities**
+- VIHANSA 2K26 — 24-hour National-Level Hackathon, NLP Sentiment Analysis problem.
+- TECHNOVA '26 — National-Level Hackathon participation.
+- ICRIT '26 — Research paper presentation on Integrated Cooperative Farming System with Farmer Connectivity and Crop Recommendation.
+- Data Analytics using Statistical Tools — National-Level Workshop, Karpagam College of Engineering.
+
+## 08. Certifications
+
+- Human Computer Interaction — NPTEL, IIT Delhi, Elite, 86%.
+- Design & Implementation of Human–Computer Interfaces — NPTEL, IIT Guwahati, Elite, 61%.
+- Privacy and Security in Online Social Media — NPTEL, IIIT Hyderabad, 57%.
+- Foundations of Cyber Security: Threats, Tools & Practical Defense — ISEA Project Phase III.
+
+## 09. Education
+
+**B.Tech — Artificial Intelligence and Data Science**
+
+Dr. NGP Institute of Technology, Coimbatore
+
+2023 – 2027 · Final Year
+
+## 10. Currently Exploring
+
+My current learning interests include:
+
+- Full Stack Development
+- Generative AI & Large Language Models
+- Retrieval-Augmented Generation (RAG)
+- AI Agents
+- Modern Web Technologies
+- Blockchain Technology
+
+## 11. Getting Started
+
+You can run the portfolio project locally.
 
 ### Prerequisites
 
-- Node.js `v20+` or `v24+`
-- npm `v10+`
+- Node.js
+- npm
+- Git
 
-### Installation
+### Clone the repository
 
 ```bash
-# Clone the repository
-git clone https://github.com/Abdul-stack871/Simple-Portfolio.git
-cd Simple-Portfolio
+git clone https://github.com/Abdul-stack871/abdul-rahuman-portfolio.git
+```
 
-# Install dependencies
+### Navigate to the project
+
+```bash
+cd abdul-rahuman-portfolio
+```
+
+### Install dependencies
+
+```bash
 npm install
+```
 
-# Start local development server
+### Start development server
+
+```bash
 npm run dev
 ```
 
-The site will be live at `http://localhost:5173/`.
-
-### Building for Production
+### Create production build
 
 ```bash
 npm run build
 ```
 
-This generates an optimized, minified production build inside the `dist/` folder.
+The Vite production build is generated in the `dist` directory.
 
----
+## 12. Deployment
 
-## ✦ Environment Configuration
+This portfolio is deployed on Vercel.
 
-Create a `.env` file in the project root if you want automatic contact form email delivery without backend infrastructure:
+**Live Website:**  
+https://abdul-rahuman-portfolio-seven.vercel.app/
 
-```env
-# Free Web3Forms Access Key (https://web3forms.com)
-VITE_WEB3FORMS_ACCESS_KEY=your_access_key_here
+Deployment workflow:
 
-# Alternatively, your custom backend POST endpoint:
-# VITE_CONTACT_ENDPOINT=https://api.yourdomain.com/contact
+```mermaid
+flowchart LR
+    A[Local Development] --> B[Git Commit]
+    B --> C[GitHub]
+    C --> D[Vercel Build]
+    D --> E[Production]
 ```
 
-*Note: If neither variable is configured, the contact form automatically uses the built-in mailto fallback addressed to `abdulrahumanrock15@gmail.com` with the prefilled user data.*
+## 13. Repository
+
+**GitHub:**  
+https://github.com/Abdul-stack871/abdul-rahuman-portfolio
+
+## 14. Connect With Me
+
+I'm always interested in connecting with developers, exploring new technologies, and discussing opportunities to build useful software.
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-Abdul--stack871-181717?style=for-the-badge&logo=github)](https://github.com/Abdul-stack871)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/abdul-rahuman281/)
+
+[![LeetCode](https://img.shields.io/badge/LeetCode-AbdulStack-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AbdulStack/)
+
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abdulrahumanrock15@gmail.com)
+
+</div>
 
 ---
 
-## ✦ Production Deployment
+<div align="center">
 
-### 1. Deploy to Vercel (Recommended)
+### Code. Create. Innovate. Repeat.
 
-1. Push your latest code to your GitHub repository:
-   ```bash
-   git add .
-   git commit -m "Production release: Abdul Rahuman Developer Portfolio"
-   git push origin main
-   ```
-2. Go to [vercel.com](https://vercel.com) and log in with your GitHub account (`Abdul-stack871`).
-3. Click **Add New...** &rarr; **Project**.
-4. Select your portfolio repository.
-5. Vercel automatically detects **Vite** and sets:
-   - **Framework Preset:** Vite
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-6. *(Optional)* Add `VITE_WEB3FORMS_ACCESS_KEY` under **Environment Variables**.
-7. Click **Deploy**. Your site will be live on a secure HTTPS URL (e.g., `https://abdulrahuman.vercel.app`).
+Designed and developed by **Abdul Rahuman**.
 
-### 2. Deploy to Netlify
-
-1. Log in to [netlify.com](https://netlify.com) with GitHub.
-2. Click **Add new site** &rarr; **Import an existing project**.
-3. Select your repository.
-4. Netlify will use the included [`netlify.toml`](file:///d:/ABDUL%20RAHMAN/Projects/New%20Portfolio/netlify.toml) automatically:
-   - **Build command:** `npm run build`
-   - **Publish directory:** `dist`
-5. Click **Deploy**.
-
----
-
-## ✦ Maintenance & Updates
-
-### Updating Your Resume
-Replace the file at `public/resume.pdf` with your latest CV. When committed and pushed, the website will instantly download the updated PDF.
-
-### Adding / Editing Projects
-Open [`src/components/Projects.tsx`](file:///d:/ABDUL%20RAHMAN/Projects/New%20Portfolio/src/components/Projects.tsx) and update the `projects` array with your new project title, screenshots, tech badges, and GitHub link.
-
-### Connecting a Custom Domain
-On Vercel or Netlify:
-1. Go to **Project Settings** &rarr; **Domains**.
-2. Enter your custom domain (e.g., `abdulrahuman.dev`).
-3. Add the provided CNAME / A records in your domain registrar (GoDaddy, Namecheap, Cloudflare).
-4. SSL certificates are provisioned automatically.
-
----
-
-## ✦ Author
-
-**Abdul Rahuman**
-- Email: [abdulrahumanrock15@gmail.com](mailto:abdulrahumanrock15@gmail.com)
-- GitHub: [Abdul-stack871](https://github.com/Abdul-stack871)
-- LinkedIn: [abdul-rahuman281](https://www.linkedin.com/in/abdul-rahuman281/)
-- LeetCode: [AbdulStack](https://leetcode.com/u/AbdulStack/)
-
+</div>
